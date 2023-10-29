@@ -1,0 +1,69 @@
+header {
+    height: 3.6rem;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+header > div {
+    height: inherit;
+    flex: 1;
+    gap: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+header .left {
+    justify-content: start;
+}
+
+header .mid {
+    justify-content: center;
+}
+
+header .right {
+    justify-content: end;
+}
+
+.icon {
+    width: 1.8rem;
+    border-radius: 50%;
+}
+
+.button {
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    color: none;
+}
+
+.button:hover {
+    .icon {
+        transition: all 0.1s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.041);
+    }
+}
+
+.header > .right {
+    align-items:center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+
+.header > .left {
+    align-items:center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+/* .header > .left > .button {
+    background-color: aqua;
+}
+
+.header > .right > .button {
+    flex: none;
+} */

@@ -1,0 +1,79 @@
+#!/usr/bin/python3
+"""DB Storage"""
+
+from os import getenv
+
+import sqlalchemy
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, scoped_session
+from user import User
+from board import Board
+from sheet import Sheet
+
+
+models = {"User": User, "Board": Board, "Sheet": Sheet}
+
+class DBStorage:
+    """HANDLER FOR THE DATABASE STORAGE ENGINE"""
+
+    __engine = None
+    __session = None
+
+    def __init__(self):
+        """Instantiate a DBStorage object"""
+        BOARDLY_MYSQL_USER = getenv('BOARDLY_MYSQL_USER')
+        BOARDLY_MYSQL_PWD = getenv('BOARDLY_MYSQL_PWD')
+        BOARDLY_MYSQL_HOST = getenv('BOARDLY_MYSQL_HOST')
+        BOARDLY_MYSQL_DB = getenv('BOARDLY_MYSQL_DB')
+        BOARDLY_ENV = getenv('BOARDLY_ENV')
+        self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.
+                                      format(BOARDLY_MYSQL_USER,
+                                             BOARDLY_MYSQL_PWD,
+                                             BOARDLY_MYSQL_HOST,
+                                             BOARDLY_MYSQL_DB))
+
+    def new(self, obj):
+        """ Creates a db object """
+        self.__session.add(obj)
+
+    def save(self):
+        """ Saves objects in session to the db """
+        self.__session.commit()
+    
+    def delete(self, obj):
+        """ Delete an object obj from the database """
+        if obj:
+            self.__session.delete(obj)
+
+
+    def get(self, cls, id):
+        """
+        Returns the object based on the class name and its ID, or
+        None if not found
+        """
+        if cls not in models.values():
+            return None
+
+        all_cls = models.storage.all(cls)
+        for value in all_cls.values():
+            if (value.id == id):
+                return value
+
+        return None
+
+    def count(self, cls=None):
+        """
+        count the number of objects in storage
+        """
+        all_class = classes.values()
+
+        if not cls:
+            count = 0
+            for clas in all_class:
+                count += len(models.storage.all(clas).values())
+        else:
+            count = len(models.storage.all(cls).values())
+
+        return count
+
+storage = DBStorage()

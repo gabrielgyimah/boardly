@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boardly</title>
+    <link rel="stylesheet" href="../static/styles/index.css">
+    <link rel="stylesheet" href="../static/styles/header.css">
+    <link rel="stylesheet" href="../static/styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="left"></div>
+        <div class="mid"></div>
+        <div class="right">
+            <button class="icon-button" id="header-view-profile">
+                <img src="../static/images/icons/user-profile-photo.jpg" alt="profile" class="icon">
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="main-container" id="draw-container">
+            <div id="tools">
+                <!-- Shapes -->
+                <div class="row shapes">
+                    <div class="tools-title">
+                        <label class="title tool-options">Shapes</label>
+                      <!-- <img src="" alt="" id="brushnerasor-active"> -->
+                    </div>
+                    <label class="title">Shapes</label>
+                    <ul class="options">
+                      <li class="option tool" id="rectangle">
+                        <img src="../static/images/shapes/rectangle.svg" alt="">
+                        <span>Rectangle</span>
+                      </li>
+                      <li class="option tool" id="circle">
+                        <img src="../static/images/shapes/circle.svg" alt="">
+                        <span>Circle</span>
+                      </li>
+                      <li class="option tool" id="triangle">
+                        <img src="../static/images/shapes/triangle.svg" alt="">
+                        <span>Triangle</span>
+                      </li>
+                      <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill color</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Tool options -->
+                  <div class="row brushnerasor">
+                    <div class="tools-title">
+                        <label class="title tool-options">Options</label>
+                        <img src="" alt="" id="brushnerasor-active">
+                    </div>
+                    <ul class="options">
+                      <li class="option active tool" id="brush">
+                        <img src="../static/images/shapes/brush.svg" alt="">
+                        <span>Brush</span>
+                      </li>
+                      <li class="option tool" id="eraser">
+                        <img src="../static/images/shapes/eraser.svg" alt="">
+                        <span>Eraser</span>
+                      </li>
+                      <li class="option">
+                        <input type="range" id="size-slider" min="1" max="30" value="5">
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Color options -->
+                  <div class="row colors">
+                        <div class="tools-title">
+                            <label class="title tool-options">Colors</label>
+                            <!-- <img src="" alt="" id="brushnerasor-active"> -->
+                        </div>
+                        <ul class="options">
+                            <li class="option"></li>
+                            <li class="option selected"></li>
+                            <li class="option"></li>
+                            <li class="option"></li>
+                            <li class="option">
+                                <input type="color" id="color-picker" value="#4A98F7">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row buttons">
+                        <button class="clear-canvas">Clear</button>
+                        <button class="save-img">Save</button>
+                    </div>
+                    <!-- Next and Prevoius Sheets -->
+                    <div class="row buttons">
+                      <button id="previous-canvas">Previous</button>
+                      <button id="next-canvas">Next</button>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script -->
+    <script src="../static/scripts/index.js"></script>
+</body>
+</html>

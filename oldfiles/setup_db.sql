@@ -1,0 +1,49 @@
+-- prepares a MySQL server for the project
+
+CREATE DATABASE IF NOT EXISTS boardly;
+CREATE USER IF NOT EXISTS 'boardly_dev'@'localhost' IDENTIFIED BY 'boardly_dev_pwd';
+GRANT ALL PRIVILEGES ON `boardly`.* TO 'boardly_dev'@'localhost';
+GRANT SELECT ON `performance_schema`.* TO 'boardly_dev'@'localhost';
+FLUSH PRIVILEGES;
+
+USE boardly;
+
+/* DROP TABLE IF EXISTS users; */
+
+CREATE TABLE users (
+	id VARCHAR(255) PRIMARY KEY,
+	username VARCHAR(50) UNIQUE,
+	firstName VARCHAR(50) NOT NULL,
+	LastName VARCHAR(50) NOT NULL,
+	email VARCHAR(80) NOT NULL UNIQUE,
+	password VARCHAR(255) NOT NULL,
+	salt VARCHAR(255) NOT NULL,
+	createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+/* DROP TABLE IF EXISTS boards; */
+
+CREATE TABLE boards (
+        id VARCHAR(255) PRIMARY KEY,
+        createdBY VARCHAR(255) NOT NULL,
+        createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+        FOREIGN KEY (createdBY) REFERENCES users(id)
+);
+
+/* DROP TABLE IF EXISTS sheets;
+DROP TABLE IF EXISTS sheet; */
+
+CREATE TABLE sheets (
+        id VARCHAR(255) PRIMARY KEY,
+	data VARCHAR(10000) NOT NULL,
+        createdBY VARCHAR(255) NOT NULL,
+	board VARCHAR(255) NOT NULL,
+        createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+        FOREIGN KEY (createdBY) REFERENCES users(id),
+	FOREIGN KEY (board) REFERENCES boards(id)
+);
