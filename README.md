@@ -1,3 +1,6 @@
+![Boardly Screenshot](boardly/static/images/thumbnail.png)
+
+
 <h1>Introduction</h1>
 Welcome to Boardly, where digital artistry meets creativity! Boardly is an online drawing platform that redefines the joy of childhood drawing in the digital age. Crafted with passion, this project is a solo endeavor by [Your Name], a student enrolled in the ALX Software Engineering program.
 
