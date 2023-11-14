@@ -1,4 +1,4 @@
-![Boardly Screenshot](https://github.com/gabrielgyimah/boardly/tree/master/static/images/thumbnail.png)
+![Boardly Screenshot](https://imgur.com/jOWTbsu)
 
 
 <h1>Introduction</h1>
