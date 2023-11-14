@@ -1,0 +1,152 @@
+main {
+width: 100vw;
+display: flex;
+height: calc(100vh - 3.6rem);
+}
+
+.main-container {
+height: 100%;
+width: 100%;
+padding: 1.2rem;
+display: flex;
+flex-direction: row;
+gap: 1.2rem;
+}
+
+#tools {
+width: 26%;
+height: 100%;
+max-width: 14rem;
+display: flex;
+flex-direction: column;
+gap: 0.8rem;
+}
+
+#tools > div {
+padding: 0.8rem;
+border-radius: 1.2rem;
+border: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+#tools > div > .tools-title {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+display: block;
+border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+margin-bottom: 0.4rem;
+padding-bottom: 0.2rem;
+}
+
+#tools > .colors > .options {
+display: flex;
+flex-direction: row;
+justify-content: space-between
+}
+
+.colors .option{
+height: 20px;
+width: 20px;
+border-radius: 50%;
+margin-top: 3px;
+cursor: pointer;
+position: relative;
+}
+.colors .option:nth-child(1){
+background-color: #fff;
+border: 1px solid #bfbfbf;
+}
+.colors .option:nth-child(2){
+background-color: #000;
+}
+.colors .option:nth-child(3){
+background-color: #E02020;
+}
+.colors .option:nth-child(4){
+background-color: #6DD400;
+}
+.colors .option:nth-child(5){
+background-color: #4A98F7;
+}
+.colors .option.selected::before{
+position: absolute;
+content: "";
+top: 50%;
+left: 50%;
+height: 12px;
+width: 12px;
+background: inherit;
+border-radius: inherit;
+border: 2px solid #fff;
+transform: translate(-50%, -50%);
+}
+.colors .option:first-child.selected::before{
+border-color: #ccc;
+}
+.option #color-picker{
+opacity: 0;
+cursor: pointer;
+}
+
+.options {
+display: flex;
+flex-direction: column;
+gap: 0.2rem;
+}
+
+.options > .option {
+display: flex;
+flex-direction: row;
+cursor: pointer;
+gap: 0.4rem;
+}
+
+#fill-color {
+margin-right: 0.3rem;
+}
+
+canvas {
+width: 72%;
+height: 100%;
+flex: 1;
+border-radius: 1.2rem;
+border:  1px solid rgba(0, 0, 0, 0.137);
+}
+
+#tools > .buttons {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+gap: 0.4rem;
+padding: 0.2rem;
+}
+
+#tools > .buttons > button {
+background-color: transparent;
+border: none;
+height: 1.6rem;
+flex: 1;
+border-radius: 4rem;
+padding: 0.4rem;
+}
+
+#tools > .buttons > button:hover {
+background-color: #6DD400;
+color: white;
+}
+
+
+.help-empty-blog {
+height: 3.6rem;
+width: 100%;
+}
+
+/* @media screen and (max-width: 768px) {
+.sidebar {
+                display: none;
+}
+
+.main > .canvas {
+                height: calc(100vh - 10.4rem);
+}
+} */

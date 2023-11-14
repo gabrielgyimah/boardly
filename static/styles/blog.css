@@ -1,0 +1,201 @@
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+
+.main {
+width: calc(100vw - 2.4rem);
+flex-grow: 1;
+padding: 0 1.2rem;
+height: calc(100vh - 4.8rem);
+}
+.help-empty-blog {
+height: 4.8rem;
+width: 100%;
+}
+
+.hero-section {
+min-height: 60%;
+width: 60%;
+display: flex;
+margin: 0 auto;
+flex-direction: row;
+}
+
+.hero-section > div {
+min-height: 100%;
+width: 50%;
+}
+
+.hero-section > div:nth-child(1) {
+background-image: url('../images/icons/user-profile-photo.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 1.2rem 0 0 1.2rem;
+}
+
+
+.hero-section > div:nth-child(2) {
+border-radius: 0 1.2rem 1.2rem 0;
+border-right: 1px solid rgba(0, 0, 0, 0.144);
+border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+border-top: 1px solid rgba(0, 0, 0, 0.144);
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.hero-section > div:nth-child(2) > div > h1:nth-child(1) {
+max-width: max-content;
+display: inline;
+color: rgb(128, 0, 255);
+font-weight: 50;
+font-size: 3rem;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.hero-section > div:nth-child(2) > div > h1:nth-child(2) {
+max-width: max-content;
+display: inline;
+color: #6DD400;
+font-weight: 50;
+font-size: 3rem;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.hero-section > div:nth-child(2) > p {
+font-family: Arial, Helvetica, sans-serif;
+word-spacing: 3px;
+line-height: 1.1rem;
+padding: 0 1rem 1rem 1rem;
+color: rgba(0, 0, 0, 0.651);
+}
+
+.hero-section > div:nth-child(2) > div {
+white-space: nowrap;
+background-color: white;
+padding: 0.8rem;
+}
+
+.hero-section > div:nth-child(2) > div > button {
+width: 6rem;
+height: 6rem;
+border: none;
+background-color: transparent;
+box-shadow: 0 0 4px rgba(0, 0, 0, 0.144);
+border-radius: 1rem;
+
+}
+
+.content {
+padding: 1.2rem 0;
+width: 60%;
+margin: 0 auto;
+}
+
+.content > footer {
+height: max-content;
+width: 100%;
+align-self: center;
+display: flex;
+margin: 1.2rem auto 0 auto;
+flex-direction: row;
+border-radius: 1.2rem;
+background-color: blueviolet;
+}
+
+.content > footer > div {
+height: inherit;
+flex: 1;
+padding: 1.2rem;
+color: white;
+}
+
+.content > footer > div > h2 {
+border-bottom: 1px solid white;
+width: 100%;
+margin-bottom: 0.8rem;
+}
+
+
+/*--- CONTENT ---*/
+.item > h3 {
+margin: 1rem 0.4rem 0 0;
+color: rgb(59, 59, 59);
+}
+
+.item > p {
+font-family: Arial, Helvetica, sans-serif;
+word-spacing: 3px;
+line-height: 1.1rem;
+color: rgba(0, 0, 0, 0.651);
+}
+
+/*--- SOCIALS -----*/
+.socials-btn {
+background-color: transparent;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-content: center;
+border: none;
+height: 1rem;
+margin-bottom: 0.4rem;
+color: white;
+}
+
+.socials-btn:hover {
+border-bottom:1px solid white;
+}
+
+@media all and (max-width: 768px) {
+.page-title {
+width: 5rem;
+}
+
+.boardly-logo {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 2rem;
+color: #6DD400;
+}
+
+.main {
+width: 100%;
+}
+
+.hero-section {
+height: max-content;
+width: 100%;
+flex-direction: column;
+} 
+
+.hero-section > div {
+width: 100%;
+}
+
+.hero-section > div:nth-child(1) {
+height: 18rem;
+border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.hero-section > div:nth-child(2) {
+border-radius: 0 0 1.2rem 1.2rem;
+border-left: 1px solid rgba(0, 0, 0, 0.144);
+border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+border-right: 1px solid rgba(0, 0, 0, 0.144);
+}
+
+.content {
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+}
+
+.content > footer {
+width: 100%;
+}
+}

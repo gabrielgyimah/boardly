@@ -1,0 +1,99 @@
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: white;
+height: 3.6rem;
+flex: 1;
+display: flex;
+flex-direction: row;
+z-index: 1;
+box-shadow: 0 2px 2px rgba(0, 0, 0, 0.055);
+}
+
+header > div {
+height: inherit;
+flex: 1;
+gap: 1.2rem;
+display: flex;
+align-items: center;
+}
+
+header .left {
+justify-content: start;
+}
+
+/* header .mid {
+justify-content: center;
+} */
+
+header .right {
+justify-content: end;
+padding-right: 1.2rem;
+}
+
+.icon {
+width: 1.8rem;
+border-radius: 50%;
+}
+
+header button {
+height: 2.2rem;
+padding: 1rem;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+background-color: #6DD400;
+border: none;
+border-radius: 1.2rem;
+margin: 0.4rem 0;
+color: white;
+}
+
+.button:hover {
+.icon {
+                transition: all 0.1s ease-in-out;
+                background-color: rgba(0, 0, 0, 0.041);
+}
+}
+
+header > .right {
+align-items:center;
+justify-content: flex-end;
+gap: 1rem;
+}
+
+
+
+header > .left {
+align-items:center;
+justify-content: flex-start;
+gap: 1rem;
+padding-left: 1.2rem;
+}
+
+.boardly-logo {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 2.4rem;
+color: #6DD400;
+}
+
+.page-title {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 1.2rem;
+color: blueviolet; 
+}
+
+a {
+text-decoration: none;
+}
+
+/* .header > .left > .button {
+background-color: aqua;
+}
+
+.header > .right > .button {
+flex: none;
+} */
