@@ -3,9 +3,9 @@ Welcome to Boardly, where digital artistry meets creativity! Boardly is an onlin
 
 Explore Boardly's magic: 
 
-For insights into the development journey, check out the Final Project Blog Article: gabrielgyimah.hashnode.dev/unveiling-boardly-a-journey-into-digital-creativity
+For insights into the development journey, check out the Final Project Blog Article: https://gabrielgyimah.hashnode.dev/unveiling-boardly-a-journey-into-digital-creativity
 
-Connect with the author on LinkedIn: linkedin.com/in/gabriel-gyimah-06645974/
+Connect with the author on LinkedIn: https://linkedin.com/in/gabriel-gyimah-06645974/
 
 <h3>Installation</h3>
 To run Boardly locally, follow these simple steps:
@@ -46,4 +46,4 @@ Boardly is open-source and available under the MIT License. Feel free to explore
 
 Reach out:
 email: gabrielamanfogyimah@gmail.com
-Linkedin: linkedin.com/in/gabriel-gyimah-06645974/
+Linkedin: https://linkedin.com/in/gabriel-gyimah-06645974/
